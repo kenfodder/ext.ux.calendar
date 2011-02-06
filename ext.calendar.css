@@ -1,0 +1,13 @@
+.x-calendar-table {
+  width: 100%;
+}
+.x-calendar-table th, .x-calendar-table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.x-calendar-table td {
+  height: 50px;
+  width: 50px;
+}
