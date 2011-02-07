@@ -8,7 +8,7 @@ Ext.setup({
             dockedItems: [{
                 xtype: 'toolbar',
                 dock: 'top',
-                title: 'Ext.Calendar'
+                title: 'Ext.ux.Calendar'
             }],
             items: [cal]
         });
