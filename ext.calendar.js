@@ -38,7 +38,9 @@ Ext.ux.Calendar = Ext.extend(Ext.Panel, {
         var lastDayOfMonth = this.daysInAMonth(this.year, this.month);
         var currentDay = 1;    
         var rows = [];
-        for(var row = 0; row < 5; row++) {
+        for(var row = 0; row < 6; row++) {
+            if(currentDay > lastDayOfMonth)
+                break;
             rows[row] = [];
             for(var col = 0; col < 7; col++) {
                 // don't start till the first day of the month
@@ -86,6 +88,7 @@ Ext.ux.Calendar = Ext.extend(Ext.Panel, {
     
     daysInAMonth: function(year, month)  {
         var days;
+        // for some silly reason month 0 is January in Javascript
         if (month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11)  days = 31;
         else if (month == 3 || month == 5 || month == 8 || month == 10) days = 30;
         else if (month == 1)  {
